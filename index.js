@@ -85,7 +85,7 @@ function allWagesFor(record){
     let wage = 0
     let time = record.timeInEvents; //array of date
 
-    for (day of time){
+    for (let day of time){
         wage += wagesEarnedOnDate(record, day.date)
     }
     
@@ -95,11 +95,11 @@ function allWagesFor(record){
 
 function calculatePayroll (array){
     let payroll = 0
-    for(employee of array){
+    for(let employee of array){
         let wage = 0
         let time = employee.timeInEvents; //array of date
 
-        for (day of time){
+        for (let day of time){
             wage += wagesEarnedOnDate(employee, day.date)
         }
         payroll += wage
